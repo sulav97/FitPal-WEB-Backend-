@@ -1,0 +1,87 @@
+{
+  "name": "gym_app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "assert": "^2.1.0",
+    "axios": "^1.7.2",
+    "bcrypt": "^5.1.1",
+    "browserify-zlib": "^0.2.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.12",
+    "deps": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "framer-motion": "^11.3.24",
+    "fs-extra": "^11.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "https-browserify": "^1.0.0",
+    "joi": "^17.13.3",
+    "joi-password-complexity": "^5.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "legacy": "^0.0.3",
+    "mongodb": "^6.8.0",
+    "mongoose": "^8.5.4",
+    "node-polyfill-webpack-plugin": "^4.0.0",
+    "nodemailer": "^6.9.14",
+    "openai": "^4.0.0",
+    "path": "^0.12.7",
+    "peer": "^1.0.0",
+    "react": "^18.2.0",
+    "react-calendar": "^5.0.0",
+    "react-dom": "^18.2.0",
+    "react-horizontal-scrolling-menu": "^2.8.2",
+    "react-icons": "^5.4.0",
+    "react-loader-spinner": "^5.3.4",
+    "react-router-dom": "^6.11.1",
+    "react-scripts": "^5.0.1",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "styles": "^0.2.1",
+    "url": "^0.11.3",
+    "util": "^0.12.5",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.93.0"
+  },
+  "scripts": {
+    "start": "node src/server/login.js",
+    "client": "cross-env PORT=3050 react-scripts start",
+    "server": "cross-env PORT=8080 nodemon src/server/login.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cross-env CI=false react-scripts --openssl-legacy-provider build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build && node move-build.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.4",
+    "tailwindcss": "^3.4.17",
+    "webpack-cli": "^5.1.4"
+  }
+}
